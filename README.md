@@ -10,10 +10,12 @@
 * Having a shared buffer.
 * Keeping track of items produced and consumed.
 * Keeping up with production and or consumption (overflow/underflow).
+* Defining a finish point where the two processes stop.
 ## Solution
 * The buffer is in the shared memory.
 * We use in and out integer variable in the shared memory to keep track of production and consumption.
 * We will be using a circular queue and in, out variables to store and wait for the other task to finish.
+* Defined a runtime variable that limits production and consumption after which the processes terminate.
 ## How to use?
 * Use these commands to start the two processes in a linux shell.
 ```
